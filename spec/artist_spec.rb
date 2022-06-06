@@ -1,3 +1,4 @@
+require 'pry'
 describe "Artist" do
   let(:artist) do
     Artist.new(name: 'Justice', genre: 'Electronic', age: Time.now.strftime("%Y").to_i - 2003, hometown: "Paris")
@@ -10,6 +11,7 @@ describe "Artist" do
   it "can instantiate with a name, genre, age and hometown" do
     expect(artist.name).to eq("Justice")
     expect(artist.genre).to eq("Electronic")
+    # binding.pry
     expect(artist.age).to eq(Time.now.strftime("%Y").to_i - 2003)
     expect(artist.hometown).to eq("Paris")
   end
